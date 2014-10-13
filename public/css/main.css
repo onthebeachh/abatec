@@ -5484,7 +5484,7 @@ input {
   height: 672px;
   width: 100%;
   position: fixed;
-  background: url('../images/iphone.png') center center no-repeat;
+  background: url('http://www.mydigitaledge.com.au/wp-content/themes/haven/img/content/1280x850.jpeg') center center no-repeat;
   background-size: cover;
   z-index: -100;
 }
