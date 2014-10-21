@@ -122,7 +122,7 @@
                     <h1>ABATEC INGENIERÍA</h1>
                     <p class="lead">¡Cuando la tecnología lidera el cambio!</p>
                     <a href="#info" class="btn btn-hg btn-info">Nosotros</a>
-                    <a href="#gallery" class="btn btn-hg btn-inverse inline">Portfolio</a>
+                    <a href="#gallery" class="btn btn-hg btn-inverse inline">Servicios</a>
                 </div>
 
             </div><!-- /row -->
@@ -270,15 +270,21 @@
           <div class="col-md-6">
 
             <!--////////// Newsletter Form //////////-->
-            <form id="newsletter-signup">
-              <div class="input-group">
-                <input type="text" name="e-mail" id="e-mail" class="form-control input-hg" placeholder="Escribe tu Email">
-                          <span class="input-group-btn">
+
+
+            <%= form_for @visit, :remote => true, data: {type: :json } , html: { role: :form, 'data-model' => 'visit', :id => 'newsletter-signup' } do |f| %>
+
+                <div class="input-group">
+                  <%= f.text_field :email, :placeholder => "Escribe tu Email", :class => 'form-control input-hg'%>
+                  <span class="input-group-btn">
                             <button class="btn btn-inverse btn-hg" type="submit" name="submit">
                               <span class="fui-mail"></span></button>
                           </span>
-              </div><!-- /input-group -->
-            </form>
+                </div><!-- /input-group -->
+            <% end %>
+
+
+
             <!--////////// end of Newsletter Form ///////////-->
 
             <div id="error-info"></div><!-- Error notification for newsletter signup form -->

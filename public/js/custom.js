@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 
 	/* ========== NEWSLETTER SIGNUP ========== */
-
+/*
     $("#newsletter-signup").submit(function() {
 		var str = $(this).serialize();
 		$.ajax({
@@ -70,7 +70,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-
+*/
 
 	/* ========== CONTACT FORM ========== */
 
