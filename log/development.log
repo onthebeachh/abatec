@@ -20158,3 +20158,68 @@ ABATEC
 
   Rendered visits/show.json.jbuilder (0.2ms)
 Completed 201 Created in 4621ms (Views: 3.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visits.css?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started GET "/assets/visits.js?body=1" for 127.0.0.1 at 2014-10-21 14:36:12 -0300
+
+
+Started POST "/visits" for 127.0.0.1 at 2014-10-21 14:36:20 -0300
+Processing by VisitsController#create as JSON
+  Parameters: {"utf8"=>"✓", "visit"=>{"email"=>"rekiem.cs@gmail.com", "ip"=>"TEST"}, "submit"=>""}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "visits" ("created_at", "email", "ip", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-21 17:36:20.414542"], ["email", "rekiem.cs@gmail.com"], ["ip", "TEST"], ["updated_at", "2014-10-21 17:36:20.414542"]]
+  [1m[35m (57.2ms)[0m  commit transaction
+  Rendered user_mailer/enviar_invitacion.text.erb (0.1ms)
+
+UserMailer#enviar_invitacion: processed outbound mail in 9.7ms
+
+Sent mail to rekiem.cs@gmail.com (5554.3ms)
+Date: Tue, 21 Oct 2014 14:36:20 -0300
+From: info@pivoter.cl
+To: rekiem.cs@gmail.com
+Message-ID: <544699947647d_1e223fcfead607a02116@RamaBook.local.mail>
+Subject: =?UTF-8?Q?Confirmaci=C3=B3n_Env=C3=ADo_de_Correo?=
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+rekiem.cs@gmail.com,
+
+Tu correo fue enviado con el  N=C2=BA IDENTIFICACI=C3=93N: 25
+Te contactaremos a la brevedad
+Saludos Cordiales,
+ABATEC
+
+  Rendered visits/show.json.jbuilder (0.3ms)
+Completed 201 Created in 5629ms (Views: 3.3ms | ActiveRecord: 57.6ms)
