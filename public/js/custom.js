@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 	/* ========== CONTACT FORM ========== */
 
-    $("#contact-form").submit(function() {
+   /* $("#contact-form").submit(function() {
 		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",
@@ -93,7 +93,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-
+*/
 
 
 	/* ========== TWITTER FEED ========== */
